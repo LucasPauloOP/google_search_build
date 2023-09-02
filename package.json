@@ -1,0 +1,16 @@
+{
+  "name": "google_search_build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engnes": {
+    "node": ">19"
+  },
+  "scripts": {
+    "start": "cd backend/src && node index.js",
+    "prebuild": "cd backend && npm run build",
+    "build": "cd frontend && npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}
