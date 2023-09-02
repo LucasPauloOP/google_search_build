@@ -1,0 +1,27 @@
+<app-filter class="fixed" [form]="form" (sendRequest)="doSearch()"></app-filter>
+<div class="page">
+  <div
+
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="doSearch(true)"
+    [scrollWindow]="true"
+    class="search-results">
+
+    <mat-card *ngFor="let data of dataSource" class="data-card">
+      <mat-card-header><h3>{{data.title}}</h3>
+      </mat-card-header>
+      <mat-card-subtitle>
+        <a style="word-break: break-all;" [href]="data.url" target="_blank">[{{data.url}}]</a>
+      </mat-card-subtitle>
+      <button (click)="redirect(data.url)" [title]="data.url" mat-button>Acessar
+        Link do resultado</button>
+    </mat-card>
+
+  </div>
+  <div *ngIf="!(dataSource || []).length">
+    <h3 style="text-align:center;">Nenhum Resultado encontrado ou pesquisa ainda
+      não realizada.</h3>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<form  [formGroup]="form" class="form-margin" (ngSubmit)="doSearch()">
+  <mat-form-field class="mat-form-field-width">
+    <mat-label>Realize uma pesquisa</mat-label>
+    <input type="text" formControlName="search" matInput placeholder="Digite aqui">
+    <mat-icon matSuffix (click)="doSearch()">search</mat-icon>
+  </mat-form-field>
+</form>

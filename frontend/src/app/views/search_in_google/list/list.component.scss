@@ -1,0 +1,27 @@
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  padding: 16px;
+  padding-top: 102px;
+}
+
+.data-card{
+  padding: 5px;
+  margin: 8px 0px;
+  width: 20%;
+  border: 1px solid black;
+  font-size: 30px;
+  text-align: center;
+}
